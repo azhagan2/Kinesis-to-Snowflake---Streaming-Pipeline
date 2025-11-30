@@ -25,7 +25,7 @@ The pipeline follows the **Medallion Architecture** (Bronze → Silver → Gold)
 ### 2. Transformation Layer (Snowflake)
 The core logic resides within Snowflake, utilizing **Streams and Tasks** for Change Data Capture (CDC) and orchestration.
 
-![Transfomation layer](./Transformation\layer.svg)
+![Transfomation layer](./Transformationlayer.svg)
 
 #### 🟤 Bronze Zone (Raw Ingestion)
 * `json_raw_data`: Stores the raw JSON payloads exactly as received from Firehose.
