@@ -1,0 +1,18 @@
+
+Codes for generating private and public keys for Kinesis Firehose integration with Snowflake:
+
+ Linux / MacOS 
+ ------------------------
+
+
+openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out private_key.p8 -nocrypt
+
+
+ Windows PowerShell 
+ ------------------------
+(Get-Content private_key.p8) -notmatch "-----" -join "" | Set-Content -NoNewline private_key_kinesis.txt
+
+
+
+openssl rsa -in private_key.p8 -pubout -out public_key.pub
+
